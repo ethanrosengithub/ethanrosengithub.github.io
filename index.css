@@ -1,0 +1,239 @@
+body{
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.bg-light{
+    background: #f4f4f4;
+    color:#333;
+}
+
+.bg-dark{
+    background:#333;
+    color:#f4f4f4;
+}
+
+
+.center{
+    text-align: center;
+    margin: auto;
+ }
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+/* everything in the showcase */
+.showcase::after{
+    content: '';
+    height: 100vh;
+    width: 100;
+    background-image: url(today.png);
+    background-size:cover;
+    display: block;   /*Make it its own thing seperate of the rest of the page*/
+    filter: blur(3px);
+    -webkit-filter: blur(10px);
+    transition: all 1.1s;
+}
+
+
+.showcase:hover::after{
+    filter: blur(.2px);
+    -webkit-filter: blur(2px);
+}
+
+
+
+.showcase:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+
+.topcontent{
+    position:absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -100px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1s;
+}
+.logo{
+    border-radius: 50%;
+}
+
+
+.topcontent .logo{
+    height:180px;
+    width:180px;
+}
+
+.topcontent .title{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    
+}
+
+
+.topcontent .text{
+    line-height: 1.7;
+    margin-top: 1rem;
+    font-size: 19px;
+}
+
+
+
+
+
+
+
+/* services */
+
+
+.container{
+    max-width:1500px;
+    margin: auto; 
+    overflow: hidden;
+    padding: 1rem;
+}
+
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr;
+    grid-gap:80px;
+}
+
+
+#whatioffer{
+    grid-row: 1;  /*Position it*/
+    grid-column: 1/-1;
+    font-size:40px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#email{
+    color:whitesmoke;
+    text-decoration: none;
+}
+
+#email:hover{
+    color:rgba(8, 239, 255, 0.932);
+    display: block;
+    transform: scale(1.4);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+
+
+
+
+
+/* About */
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-gap: 100px;
+    margin-right:250px;
+    margin-left:250px;
+    padding: 20px;
+}
+
+
+#bottomicon{
+  grid-column: 1;
+}
+
+#aboutheader{
+    grid-column: 2/-1;
+    grid-row: 1;
+    font-weight: bold;
+}
+
+#aboutp{
+    grid-column: 2/-1;
+    grid-row: 1;
+    margin-top: 35px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+footer{
+    background-color: whitesmoke;
+    height: 15px;
+    padding: 25px;
+}
+
+footer p{
+    margin:0;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:560px){
+
+.showcase::after{
+    height: 50vh;
+}
+
+.topcontent{
+    top: 1%;   /*lower percentage raises it*/
+    margin-top:5px;
+    left: 40%;
+    text-align:center;
+}
+
+.topcontent .logo{
+    height:140px;
+    width:140px;
+}
+
+
+#whatioffer{
+    display:none;
+}
+
+
+
+.grid-3{
+    display: flex;
+    flex-direction:column;
+}
+
+.grid-2{
+    display: none;
+}
+
+
+}
